@@ -1,12 +1,15 @@
 package se.distansakademin.custom_rest_api.data;
 
+import lombok.Data;
 import se.distansakademin.custom_rest_api.models.Pizza;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+@Data
 public class PizzaResponse extends Pizza {
     private final int id;
+
 
     public PizzaResponse(int id, Pizza pizza){
         this(id, pizza.getName(), pizza.getDescription(), pizza.getPrice());

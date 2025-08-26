@@ -39,4 +39,14 @@ public class PizzaRepository {
     public HashMap<Integer, Pizza> getAll(){
         return pizzaMap;
     }
+
+    public Pizza get(int id) throws Exception {
+        var idExists = pizzaMap.containsKey(id);
+
+        if(!idExists){
+            throw new Exception("Invalid ID");
+        }
+
+        return pizzaMap.get(id);
+    }
 }
